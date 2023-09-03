@@ -5,6 +5,7 @@ import App from './App'
 import Home from './pages/Home'
 import Error from './pages/Error'
 import About from './pages/About'
+import Products from './pages/Products'
 
 export default createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export default createBrowserRouter([
         {
           path: '',
           element: <Home /> 
+        },
+        {
+          path: '/products',
+          element: <Products /> 
         },
         {
           path: '/about',
