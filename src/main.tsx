@@ -7,9 +7,11 @@ import router from './router'
 import {
   RouterProvider
 } from 'react-router-dom'
+import axios from 'axios'
+
+
+axios.defaults.baseURL = 'https://dummyjson.com'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>,
+  <RouterProvider router={router}></RouterProvider>
 )
