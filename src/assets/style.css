@@ -13,6 +13,8 @@
 
 :root {
   --color-body: #525252;
+  --color-primary: theme('colors.gray.700');
+  --color-primary-hover: theme('colors.gray.600');
 }
 
 * {
@@ -57,4 +59,7 @@ h1,h2,h3,h4,h5 {
   height: 250px;
   width: 100%;
   object-fit: cover;
+}
+.input {
+  @apply border w-full mb-2 p-1 px-2 rounded-sm;
 }

@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Error from './pages/Error'
 import About from './pages/About'
 import Products from './pages/Products'
+import Login from './pages/Login'
 
 export default createBrowserRouter([
     {
@@ -23,6 +24,10 @@ export default createBrowserRouter([
         {
           path: '/about',
           element: <About /> 
+        },
+        {
+          path: '/auth/login',
+          element: <Login /> 
         },
         {
           path: '*',
