@@ -1,0 +1,22 @@
+@import '@unocss/reset/tailwind.css';
+
+@font-face {
+  font-family: 'SFUI';
+  font-weight: 400;
+  src: url(fonts/SFUIText-Regular.otf);
+}
+@font-face {
+  font-family: 'SFUI';
+  font-weight: 600;
+  src: url(fonts/SFUIText-Semibold.otf);
+}
+
+* {
+  font-family: 'SFUI';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.1rem;
+}
