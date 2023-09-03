@@ -11,6 +11,10 @@
   src: url(fonts/SFUIText-Semibold.otf);
 }
 
+:root {
+  --color-body: #525252;
+}
+
 * {
   font-family: 'SFUI';
   margin: 0;
@@ -18,5 +22,5 @@
 }
 
 body {
-  font-size: 1.1rem;
+  color: var(--color-body);
 }
