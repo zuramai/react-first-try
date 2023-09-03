@@ -38,3 +38,11 @@ body {
   height: 500px;
   background-position: center center;
 }
+
+.single {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+p {
+  margin-bottom: 1rem;
+}

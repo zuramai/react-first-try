@@ -4,6 +4,7 @@ import {
 import App from './App'
 import Home from './pages/Home'
 import Error from './pages/Error'
+import About from './pages/About'
 
 export default createBrowserRouter([
     {
@@ -13,6 +14,10 @@ export default createBrowserRouter([
         {
           path: '',
           element: <Home /> 
+        },
+        {
+          path: '/about',
+          element: <About /> 
         },
         {
           path: '*',
