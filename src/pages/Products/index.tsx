@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
 import axios from 'axios'
+import { Product } from "../../types/product";
 
 
 
 export default function() {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState<Product[]>([])
 
     const fetchProducts = () => {
         axios.get('/products')
@@ -29,9 +30,8 @@ export default function() {
                         </div>
                         <div className="grid grid-cols-3 gap-5">
                             {products.map(product => {
-                                return <ProductCard title="iPhone 9" description="Nostrum repellendus tempore voluptates"/>
+                                return <ProductCard image={product.thumbnail} title={product.title} description={product.description}/>
                             })}
-                            
                         </div>
                     </section>
                 </div>
