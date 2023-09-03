@@ -1,4 +1,4 @@
-import { Link } from'react-router-dom'
+import { Link, NavLink } from'react-router-dom'
 
 function AppHeader() {
     return (
@@ -12,17 +12,23 @@ function AppHeader() {
                         </Link>
                     </div>
                 </div>
-                <div className="nav border-b border-gray-300">
+                <div className="nav border-b border-gray-200">
                     <div className="container mx-auto">
                         <ul className='flex items-center gap-5 py-3'>
                             <li>
-                                <Link to={'/'}>Home</Link>
+                                <NavLink className={'nav-link'} to={'/'}>Home</NavLink>
                             </li>
                             <li>
-                                <Link to={'/'}>Our Products</Link>
+                                <NavLink className={'nav-link'} to={'/products'}>About</NavLink>
                             </li>
                             <li>
-                                <Link to={'/'}>Login</Link>
+                                <NavLink className={'nav-link'} to={'/products'}>Products</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'nav-link'} to={'/support'}>Support</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'nav-link'} to={'/auth/login'}>Login</NavLink>
                             </li>
                         </ul>
                     </div>

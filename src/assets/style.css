@@ -24,3 +24,17 @@
 body {
   color: var(--color-body);
 }
+
+.nav-link.active {
+  color: black;
+}
+
+.page {
+  @apply container mx-auto;
+}
+
+.macbook-bg {
+  background-image: url("https://apple.com/v/home/bd/images/heroes/macbook-air-15/hero_macbook_air_15_midnight__ct0pgwizvree_large.jpg");
+  height: 500px;
+  background-position: center center;
+}
