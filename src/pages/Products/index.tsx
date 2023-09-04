@@ -30,7 +30,7 @@ export default function() {
                         </div>
                         <div className="grid grid-cols-3 gap-5">
                             {products.map(product => {
-                                return <ProductCard image={product.thumbnail} title={product.title} description={product.description}/>
+                                return <ProductCard id={product.id} image={product.thumbnail} title={product.title} description={product.description}/>
                             })}
                         </div>
                     </section>

@@ -1,7 +1,7 @@
 interface Props {
     children: any
     full?: boolean
-    onClick: () => any
+    onClick?: () => any
 }
 
 export default function(props: Props) {

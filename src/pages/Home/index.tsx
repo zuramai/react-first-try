@@ -1,7 +1,7 @@
 export default function() {
     return (
         <>
-            <div className="page ">
+            <div className=" ">
                 <div className="section" id="hero">
                     <div className="home-page macbook-bg">
                         <div className="hero-text py-16 text-center">
