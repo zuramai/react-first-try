@@ -1,23 +1,26 @@
 import axios from "axios";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Alert from "../../components/Alert";
+import { redirect, useNavigate } from "react-router-dom";
 
 export default function () {
     const [error, setError] = useState<string|null>(null)
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
-    function submitForm(e: SubmitEvent) {
+    function submitForm(e: FormEvent) {
         e.preventDefault()
         setError(null)
         axios.post('/auth/login', {
             username, password
         })
-        .then(res => [
-            console.log(res)
-        ]).catch(err => {
+        .then(res => {
+           alert("Login success")
+           navigate("/")
+        }).catch(err => {
             setError(err.response.data.message)
         })
     }
