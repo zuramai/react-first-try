@@ -12,7 +12,7 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({} as AuthContextType)
 
 export function AuthProvider({children}: {children: any}) {
-    const [user, setData] = useState<User | null>(null)
+    const [user, setData] = useState<User | null>(JSON.parse(localStorage.getItem('user') ?? "{}"))
     const setUser = (u: User) => {
         setData(u)
         localStorage.setItem('user', JSON.stringify(u))

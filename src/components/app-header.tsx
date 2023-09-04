@@ -1,9 +1,15 @@
 import { useAuth } from '@/hooks/useAuth'
-import { Link, NavLink } from'react-router-dom'
+import { Link, NavLink, redirect, useNavigate } from'react-router-dom'
 
 
 function AppHeader() {
     const auth = useAuth()
+    const navigate = useNavigate()
+
+    const logout = () => {
+        auth.clearUser()
+        navigate("/auth/login")
+    }
     
     return (
         <>
@@ -17,7 +23,7 @@ function AppHeader() {
                     </div>
                 </div>
                 <div className="nav border-b border-gray-200">
-                    <div className="container mx-auto">
+                    <div className="container mx-auto flex justify-between">
                         <ul className='flex items-center gap-5 py-3'>
                             <li>
                                 <NavLink className={'nav-link'} to={'/'}>Home</NavLink>
@@ -31,14 +37,22 @@ function AppHeader() {
                             <li>
                                 <NavLink className={'nav-link'} to={'/support'}>Support</NavLink>
                             </li>
+                           
+                        </ul>
+                        <ul className='flex items-center gap-5 py-3'>
                             {!auth?.user ? (
                                 <li>
                                     <NavLink className={'nav-link'} to={'/auth/login'}>Login</NavLink>
                                 </li>
                             ) : (
-                                <li>
-                                    <NavLink className={'nav-link'} to={'#'}>Logout</NavLink>
-                                </li>
+                                <>
+                                    <li>
+                                        <NavLink className={'nav-link'} to={'/cart'}>My Cart</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink onClick={logout} className={'nav-link'} to={'#'}>Logout</NavLink>
+                                    </li>
+                                </>
                             )}
                         </ul>
                     </div>

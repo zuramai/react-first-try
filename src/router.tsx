@@ -8,6 +8,8 @@ import Error from './pages/Error'
 import About from './pages/About'
 import Products from './pages/Products'
 import Login from './pages/Login'
+import ProductDetail from './pages/ProductDetail'
+import Cart from './pages/Cart'
 
 const routes = [
     {
@@ -23,8 +25,16 @@ const routes = [
           element: <Products /> 
         },
         {
+          path: '/products/:productId',
+          element: <ProductDetail /> 
+        },
+        {
           path: '/about',
           element: <About /> 
+        },
+        {
+          path: '/cart',
+          element: <Cart /> 
         },
         {
           path: '/auth/login',
