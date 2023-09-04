@@ -4,12 +4,14 @@ import Card from "../../components/Card";
 import { FormEvent, useState } from "react";
 import Alert from "../../components/Alert";
 import { redirect, useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function () {
     const [error, setError] = useState<string|null>(null)
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
+    const { setUser } = useAuth()
 
     function submitForm(e: FormEvent) {
         e.preventDefault()
@@ -18,8 +20,8 @@ export default function () {
             username, password
         })
         .then(res => {
-           alert("Login success")
-           navigate("/")
+            setUser(res.data)
+            navigate("/")
         }).catch(err => {
             setError(err.response.data.message)
         })

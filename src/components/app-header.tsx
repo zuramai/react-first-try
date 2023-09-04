@@ -1,6 +1,10 @@
+import { useAuth } from '@/hooks/useAuth'
 import { Link, NavLink } from'react-router-dom'
 
+
 function AppHeader() {
+    const auth = useAuth()
+    
     return (
         <>
             <header className='border-solid'>
@@ -27,9 +31,15 @@ function AppHeader() {
                             <li>
                                 <NavLink className={'nav-link'} to={'/support'}>Support</NavLink>
                             </li>
-                            <li>
-                                <NavLink className={'nav-link'} to={'/auth/login'}>Login</NavLink>
-                            </li>
+                            {!auth?.user ? (
+                                <li>
+                                    <NavLink className={'nav-link'} to={'/auth/login'}>Login</NavLink>
+                                </li>
+                            ) : (
+                                <li>
+                                    <NavLink className={'nav-link'} to={'#'}>Logout</NavLink>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
