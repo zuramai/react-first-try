@@ -15,7 +15,7 @@ import { AuthProvider } from "./hooks/useAuth"
 axios.defaults.baseURL = 'https://dummyjson.com'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename='/react-first-try'>
     <AuthProvider >
       <Router></Router>
     </AuthProvider>
