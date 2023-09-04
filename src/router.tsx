@@ -1,15 +1,14 @@
 import {
-    createBrowserRouter,
-    useRoutes
+  useRoutes
 } from 'react-router-dom'
 import App from './App'
-import Home from './pages/Home'
-import Error from './pages/Error'
 import About from './pages/About'
-import Products from './pages/Products'
+import Cart from './pages/Cart'
+import Error from './pages/Error'
+import Home from './pages/Home'
 import Login from './pages/Login'
 import ProductDetail from './pages/ProductDetail'
-import Cart from './pages/Cart'
+import Products from './pages/Products'
 
 const routes = [
     {

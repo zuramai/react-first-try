@@ -1,11 +1,11 @@
-import axios from "axios";
-import Button from "../../components/Button";
-import Card from "../../components/Card";
-import { FormEvent, useEffect, useState } from "react";
-import Alert from "../../components/Alert";
-import { redirect, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { User } from "@/types/user";
+import axios from "axios";
+import { FormEvent, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Alert from "../../components/Alert";
+import Button from "../../components/Button";
+import Card from "../../components/Card";
 
 export default function () {
     const [error, setError] = useState<string|null>(null)
@@ -63,7 +63,8 @@ export default function () {
                                 <div className="input-group mb-3">
                                     <label htmlFor="username">Username</label>
                                     <input 
-                                        id="username" type="text" className="input"  value={username}
+                                        id="username" type="text" className="input"  value={
+                                            username}
                                         onInput={(e) => setUsername((e.target as HTMLInputElement).value)}
                                         />
                                 </div>

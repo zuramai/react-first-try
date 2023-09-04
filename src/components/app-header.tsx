@@ -1,5 +1,5 @@
 import { useAuth } from '@/hooks/useAuth'
-import { Link, NavLink, redirect, useNavigate } from'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 
 function AppHeader() {
